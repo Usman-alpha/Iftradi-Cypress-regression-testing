@@ -1,0 +1,22 @@
+{
+  "name": "iftradi-regrtession-cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:run": "cypress run --env allure=true --headed",
+    "allure-report": "allure generate allure-results --clean -o allure-report",
+    "test": "npm run cy:run || npm run posttest",
+    "posttest": "npm run allure-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^8.0.1",
+    "@shelex/cypress-allure-plugin": "^2.39.1"
+  },
+  "devDependencies": {
+    "cypress": "^12.12.0"
+  }
+}
